@@ -7,8 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let playersList = [0, 1, 2, 3, 4];
+      let playerList = [0, 1, 2, 3, 4];
       let assignedPlayerToGift = [];
+
+      function getPlayerName(position) {
+        if (position === 0) return document.getElementById("player0").value;
+        if (position === 1) return document.getElementById("player1").value;
+        if (position === 2) return document.getElementById("player2").value;
+        if (position === 3) return document.getElementById("player3").value;
+        if (position === 4) return document.getElementById("player4").value;
+      }
+
+      function getRandomArbitrary(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
 
       function doMatches() {
         do {
@@ -24,7 +36,33 @@
       }
 
       function showResults() {
-        alert(playerList[0] + " ---> " + assignedPlayerToGift[0]);
+        let result =
+          getPlayerName(0) +
+          "  gives present to  " +
+          getPlayerName(assignedPlayerToGift[0]) +
+          "\n";
+        result +=
+          getPlayerName(1) +
+          "  gives present to  " +
+          getPlayerName(assignedPlayerToGift[1]) +
+          "\n";
+        result +=
+          getPlayerName(2) +
+          "  gives present to  " +
+          getPlayerName(assignedPlayerToGift[2]) +
+          "\n";
+        result +=
+          getPlayerName(3) +
+          "  gives present to  " +
+          getPlayerName(assignedPlayerToGift[3]) +
+          "\n";
+        result +=
+          getPlayerName(4) +
+          "  gives present to  " +
+          getPlayerName(assignedPlayerToGift[4]) +
+          "\n";
+
+        alert(result);
       }
 
       function doTheMagic() {
@@ -38,15 +76,15 @@
 
     <div>
       <h4>Player 1</h4>
-      <input type="text" id="player1" />
+      <input type="text" id="player0" />
       <h4>Player 2</h4>
-      <input type="text" id="player2" />
+      <input type="text" id="player1" />
       <h4>Player 3</h4>
-      <input type="text" id="player3" />
+      <input type="text" id="player2" />
       <h4>Player 4</h4>
-      <input type="text" id="player4" />
+      <input type="text" id="player3" />
       <h4>Player 5</h4>
-      <input type="text" id="player5" />
+      <input type="text" id="player4" />
     </div>
 
     <button onClick="javascript:doTheMagic()">Go Secret Santa!</button>
