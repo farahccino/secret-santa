@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "optima";
+}
+
+body {
+  color: white;
+  background-image: url("https://media.istockphoto.com/photos/christmas-tree-red-and-green-ornaments-against-a-defocused-lights-picture-id1285980067?b=1&k=20&m=1285980067&s=170667a&w=0&h=l8F9wwK4Iju8iCOT4LeG6wko4wStrReH7UN8ltkgkFQ=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5rem;
+}
+
+input {
+  height: 1.875rem;
+  width: 14.375rem;
+  font-size: 1.313rem;
+}
+
+button {
+  border-radius: 1rem;
+  color: rgba(80, 2, 2, 0.9);
+  margin-top: 0.625rem;
+  height: 1.875rem;
+  width: 14.375rem;
+  font-size: 1.313rem;
+  background-color: rgba(254, 205, 9, 0.9);
+}
